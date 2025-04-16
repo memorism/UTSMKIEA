@@ -50,7 +50,6 @@ c. Order Service
 ## 6. Pengujian
 - Menggunakan Postman untuk request ke masing-masing service
 - Validasi endpoint GET dan POST
-- Debugging menggunakan try-catch dan response()->json()
 
 ## 7. Kesimpulan
 Sistem berhasil dibangun dengan komunikasi antar layanan berjalan dengan baik. Proyek ini menunjukkan bahwa Laravel mampu digunakan sebagai pendekatan modular untuk integrasi service-to-service, memudahkan pengembangan sistem yang scalable dan terdistribusi.
