@@ -65,3 +65,7 @@ Route::get('/products/{id}', function ($id) use ($products) {
 
     return response()->json(['message' => 'Product not found'], 404);
 });
+
+Route::get('/products', function () use ($products) {
+    return response()->json($products); 
+});

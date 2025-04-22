@@ -20,5 +20,8 @@ Route::post('/orders', function (Request $request) {
     ]);
 });
 
+Route::get('/orders', function () {
+    return view('orders'); // Pastikan nama view sesuai
+});
 
 

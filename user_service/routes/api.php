@@ -26,3 +26,7 @@ Route::get('/users/{id}', function ($id) use ($users) {
 
     return response()->json(['message' => 'User not found'], 404);
 });
+
+Route::get('/users', function () use ($users) {
+    return response()->json($users); 
+});
