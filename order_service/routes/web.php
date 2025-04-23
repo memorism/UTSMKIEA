@@ -8,26 +8,26 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/orders', function () {
-    return view('orders');
-});
+// Route::get('/orders', function () {
+//     return view('orders');
+// });
 
-Route::post('/orders', function (Request $request) {
-    // Ambil data user
-    $user = Http::get("http://127.0.0.1:8001/api/users/{$request->user_id}")->json();
+// Route::post('/orders', function (Request $request) {
+//     // Ambil data user
+//     $user = Http::get("http://user_service/api/users/{$request->user_id}")->json();
 
-    // Ambil data produk
-    $product = Http::get("http://127.0.0.1:8002/api/products/{$request->product_id}")->json();
+//     // Ambil data produk
+//     $product = Http::get("http://product_service/api/products/{$request->product_id}")->json();
 
-    // Simulasi status order secara acak
-    $statuses = ['Pending', 'Success'];
-    $status = $statuses[array_rand($statuses)];
+//     // Simulasi status order secara acak
+//     $statuses = ['Pending', 'Success'];
+//     $status = $statuses[array_rand($statuses)];
 
-    return response()->json([
-        'order_id' => "{$request->user_id}{$request->product_id}",
-        'user' => $user,
-        'product' => $product,
-        'total' => $product['price'],
-        'status' => $status
-    ]);
-});
+//     return response()->json([
+//         'order_id' => "{$request->user_id}{$request->product_id}",
+//         'user' => $user,
+//         'product' => $product,
+//         'total' => $product['price'],
+//         'status' => $status
+//     ]);
+// });
